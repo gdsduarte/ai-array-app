@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import ListPlayers from './listplayers';
-import NewPlayerForm from './NewPlayerForm';
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import ListPlayers from "./listplayers";
+import NewPlayerForm from "./NewPlayerForm";
 import { players as initialPlayers } from "./players";
 
 const App = () => {
@@ -13,11 +13,16 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<ListPlayers players={players} setPlayers={setPlayers} />} />
-      <Route path="/add-player" element={<NewPlayerForm addPlayer={addPlayer} />} />
+      <Route
+        path="/ai-array-app"
+        element={<ListPlayers players={players} setPlayers={setPlayers} />}
+      />
+      <Route
+        path="/add-player"
+        element={<NewPlayerForm addPlayer={addPlayer} />}
+      />
     </Routes>
   );
 };
 
 export default App;
-

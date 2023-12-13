@@ -18,7 +18,7 @@ const NewPlayerForm = ({ addPlayer }) => {
     event.preventDefault();
     if (typeof addPlayer === "function") {
       addPlayer(newPlayer);
-      navigate("/");
+      navigate("/ai-array-app");
     } else {
       console.error("addPlayer is not a function");
     }
@@ -46,7 +46,8 @@ const NewPlayerForm = ({ addPlayer }) => {
           placeholder="First Name"
           required
         />
-        <input name="lastname"
+        <input
+          name="lastname"
           value={newPlayer.lastname}
           onChange={handleChange}
           placeholder="Last Name"
